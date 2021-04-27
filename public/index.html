@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Google Maps</title>
+    <style type="text/css">
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+
+        .container {
+            height: 35px;
+            position: relative;
+            border: 3px solid rgb(2, 22, 2);
+        }
+
+        .center {
+            margin: 2px;
+            padding: 2px;
+            position: absolute;
+            top: 45%;
+            left: 35%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        #origin,
+        #destination,
+        #speed,
+        #elevation {
+            border: 1px solid rgb(2, 22, 2);
+        }
+    </style>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <input type="text" id="origin" placeholder="Origin">
+            <input type="text" id="destination" placeholder="Destination">
+            <button type="button" id="find-route">Find Route</button>
+            <input type="text" id="speed" placeholder="Approx. Speed">
+            <input type="text" id="elevation" placeholder="Approx. Elevation">
+            <button type="button" id="go">Go</button>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1gAGoiCASQMuzAUBKUxZ7P-zd1ez8SXc&callback=initMap"
+        async></script>
+</body>
+
+</html>
