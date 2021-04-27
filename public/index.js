@@ -92,6 +92,7 @@ function initMap() {
     document.getElementById('go').addEventListener('click', (e) => {
         var speed = document.getElementById('speed').value
         var elevation = document.getElementById('elevation').value
-        startJourney(speed, elevation)
+        if(!speed || !elevation) alert('Enter Speed and Elevation')
+        else startJourney(speed, elevation)
     })
 }
